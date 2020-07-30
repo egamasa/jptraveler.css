@@ -39,3 +39,20 @@ $index-list: (
     }
   }
 }
+
+@mixin index-bdot($color) {
+  border-bottom: 2px dotted $color;
+  border-left: 1rem solid $color;
+  padding-left: 0.5rem;
+}
+
+.jt-index-bdot {
+  @each $genre in $index-list {
+    @each $name, $colors in $genre {
+      $color: nth($colors, 1);
+      &-#{$name} {
+        @include index-bdot($color);
+      }
+    }
+  }
+}
