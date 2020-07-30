@@ -56,3 +56,20 @@ $index-list: (
     }
   }
 }
+
+@mixin index-line($color) {
+  border-bottom: 2px solid $color;
+  border-top: 2px solid $color;
+  padding-left: 0.5rem;
+}
+
+.jt-index-line {
+  @each $genre in $index-list {
+    @each $name, $colors in $genre {
+      $color: nth($colors, 1);
+      &-#{$name} {
+        @include index-line($color);
+      }
+    }
+  }
+}
