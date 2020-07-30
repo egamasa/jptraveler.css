@@ -22,3 +22,20 @@ $index-list: (
     }
   }
 }
+
+@mixin index-bline($color) {
+  border-bottom: 2px solid $color;
+  border-left: 1rem solid $color;
+  padding-left: 0.5rem;
+}
+
+.jt-index-bline {
+  @each $genre in $index-list {
+    @each $name, $colors in $genre {
+      $color: nth($colors, 1);
+      &-#{$name} {
+        @include index-bline($color);
+      }
+    }
+  }
+}
