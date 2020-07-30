@@ -73,3 +73,20 @@ $index-list: (
     }
   }
 }
+
+@mixin index-wline($color) {
+  border-bottom: 4px double $color;
+  border-top: 4px double $color;
+  padding-left: 0.5rem;
+}
+
+.jt-index-wline {
+  @each $genre in $index-list {
+    @each $name, $colors in $genre {
+      $color: nth($colors, 1);
+      &-#{$name} {
+        @include index-wline($color);
+      }
+    }
+  }
+}
