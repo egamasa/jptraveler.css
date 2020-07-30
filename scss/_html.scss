@@ -1,0 +1,24 @@
+@import 'defs';
+
+$index-list: (
+  $japan,
+  $metro,
+);
+
+@mixin index($color, $bg-color) {
+  background: $bg-color;
+  border-left: 1rem solid $color;
+  padding-left: 0.5rem;
+}
+
+.jt-index {
+  @each $genre in $index-list {
+    @each $name, $colors in $genre {
+      $color: nth($colors, 1);
+      $bg-color: nth($colors, 2);
+      &-#{$name} {
+        @include index($color, $bg-color);
+      }
+    }
+  }
+}

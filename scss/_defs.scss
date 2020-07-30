@@ -1,0 +1,56 @@
+// fonts
+// $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+
+// Basic colors
+$black: #000;
+$white: #fff;
+$gray: #595959;
+$blue: #275a90;
+$red: #db423c;
+$green: #2a6f3b;
+$yellow: #ffc;
+
+// Traditional colors
+$japan: (
+  momo: (#f09199, #efd7d9),
+  wakakusa: (#c3d825, #e3e5d0),
+);
+
+// Subway line colors
+$metro: (
+  ginza: (#ff9500 ,#ffd599),
+  marunouchi: (#f62e36, #f59396),
+  hibiya: (#b5b5ac, #e6e6da),
+  hnd-tozai: (#009bbf, #00d0ff),
+  chiyoda: (#00bb85, #00ffb7),
+  yurakucho: (#c1a470, #ffda94),
+  hanzomon: (#8f76d6, #ab8cff),
+  hnd-namboku: (#00ac9b, #00ccb8),
+  fukutoshin: (#9c5e31, #ff984f),
+  asakusa: (#e83e2f, #e8938b),
+  mita: (#006ab8, #0095ff),
+  shinjuku: (#b0bf1e, #eaff29),
+  oedo: (#ce045b, #ff0571),
+);
+
+// Railroad line colors
+$train: (
+);
+
+// Airlines colors
+$airline: (
+);
+
+
+// responsive
+// $mobile-width: 767px;
+
+// %sans-serif {
+//   font-family: $sans-serif;
+//   font-size: $em;
+//   font-stretch: normal;
+//   font-style: normal;
+//   font-weight: 400;
+//   line-height: 1.65 * $em;
+// }
