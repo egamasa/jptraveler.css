@@ -1,0 +1,112 @@
+// jptraveler.css
+// _index : HTML index elements
+
+@import 'defs';
+@import 'func';
+
+$color-list: (
+  $basic,
+  $japan,
+  $metro,
+);
+
+
+@mixin border-color($color) {
+  border-color: $color;
+}
+
+@mixin bg-color($color) {
+  background: $color;
+}
+
+
+.jt-index {
+  border-left: 1rem solid;
+  padding: 0rem 0.5rem;
+  @include bg-color(lightenColor(map-get($default, 'index')));
+
+  @each $genre in $color-list {
+    @each $name, $color in $genre {
+      $bg-color: lightenColor($color);
+      &.#{$name} {
+        @if (fontWhite($bg-color)) {
+          color: $white;
+        }
+        @include border-color($color);
+        @include bg-color($bg-color);
+      }
+    }
+  }
+}
+
+.jt-index-bline {
+  border-left: 1rem solid;
+  border-bottom: medium solid;
+  padding: 0rem 0.5rem;
+
+  @each $genre in $color-list {
+    @each $name, $color in $genre {
+      &.#{$name} {
+        @include border-color($color);
+      }
+    }
+  }
+}
+
+.jt-index-bdot {
+  border-left: 1rem solid;
+  border-bottom: medium dotted;
+  padding: 0rem 0.5rem;
+
+  @each $genre in $color-list {
+    @each $name, $color in $genre {
+      &.#{$name} {
+        @include border-color($color);
+      }
+    }
+  }
+}
+
+.jt-index-line {
+  border-top: medium solid;
+  border-bottom: medium solid;
+  padding: 0rem 0.5rem;
+
+  @each $genre in $color-list {
+    @each $name, $color in $genre {
+      &.#{$name} {
+        @include border-color($color);
+      }
+    }
+  }
+}
+
+.jt-index-wline {
+  border-top: medium double;
+  border-bottom: medium double;
+  padding: 0rem 0.5rem;
+
+  @each $genre in $color-list {
+    @each $name, $color in $genre {
+      &.#{$name} {
+        @include border-color($color);
+      }
+    }
+  }
+}
+
+.jt-index-fusen {
+  border-left: 1.5em solid;
+  border-top: medium solid;
+  border-right: medium solid;
+  border-bottom: medium solid;
+  padding: 0rem 0.5rem;
+
+  @each $genre in $color-list {
+    @each $name, $color in $genre {
+      &.#{$name} {
+        @include border-color($color);
+      }
+    }
+  }
+}
