@@ -1,0 +1,30 @@
+// jptraveler.css
+// _func : Color alculate functions
+
+@import 'defs';
+
+
+@function calcBrightness($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+  @return (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+}
+
+// Make color light
+@function lightenColor($color) {
+  @return lighten($color, percentage((1 - (calcBrightness($color) / 255)) * 0.5));
+}
+
+// Evaluate optimum font color Black or White based on background color.
+@function fontWhite($color) {
+  @return (calcBrightness($color) < 128)
+}
+
+@function fontBlackOrWhite($color) {
+  @if (fontWhite($color)) {
+    @return $white;
+  } @else {
+    @return $font-black;
+  }
+}
