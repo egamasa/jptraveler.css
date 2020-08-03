@@ -1,40 +1,50 @@
-// fonts
-// $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-// $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
+// jptraveler.css
+// _defs : Color definitions
 
 // Basic colors
 $black: #000;
+$font-black: #333;
 $white: #fff;
-$gray: #595959;
-$blue: #275a90;
-$red: #db423c;
-$green: #2a6f3b;
-$yellow: #ffc;
+$gray: #666;
+$blue: #36f;
+$red: #f33;
+$green: #063;
+$yellow: #ff3;
+
+$basic: (
+  black: $black,
+  font-black: $font-black,
+  gray: $gray,
+  blue: $blue,
+  red: $red,
+  green: $green,
+  yellow: $yellow,
+);
 
 // Traditional colors
 $japan: (
-  momo: (#f09199, #efd7d9),
-  wakakusa: (#c3d825, #e3e5d0),
+  momo: #f09199,
+  wakakusa: #c3d825,
 );
 
 // Subway line colors
 $metro: (
-  ginza: (#ff9500 ,#ffd599),
-  marunouchi: (#f62e36, #f59396),
-  hibiya: (#b5b5ac, #e6e6da),
-  hnd-tozai: (#009bbf, #00d0ff),
-  chiyoda: (#00bb85, #00ffb7),
-  yurakucho: (#c1a470, #ffda94),
-  hanzomon: (#8f76d6, #ab8cff),
-  hnd-namboku: (#00ac9b, #00ccb8),
-  fukutoshin: (#9c5e31, #ff984f),
-  asakusa: (#e83e2f, #e8938b),
-  mita: (#006ab8, #0095ff),
-  shinjuku: (#b0bf1e, #eaff29),
-  oedo: (#ce045b, #ff0571),
-  kuko: (#ee5511, #edab8e),
-  hakozaki: (#0077cc, #0095ff),
-  nanakuma: (#00aa44, #00ff66),
+  ginza: #ff9500,
+  marunouchi: #f62e36,
+  hibiya: #b5b5ac,
+  hnd-tozai: #009bbf,
+  chiyoda: #00bb85,
+  yurakucho: #c1a470,
+  hanzomon: #8f76d6,
+  hnd-namboku: #00ac9b,
+  fukutoshin: #9c5e31,
+  asakusa: #e83e2f,
+  mita: #006ab8,
+  shinjuku: #b0bf1e,
+  oedo: #ce045b,
+  kuko: #ee5511,
+  hakozaki: #0077cc,
+  nanakuma: #00aa44,
 );
 
 // Railroad line colors
@@ -45,9 +55,21 @@ $train: (
 $airline: (
 );
 
+// Default colors
+$default: (
+  index: $black,
+  label: $blue,
+  marker: $yellow,
+  tag: $blue,
+  nlist: $red,
+)
 
 // responsive
 // $mobile-width: 767px;
+
+// fonts
+// $sans-serif: system-ui, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+// $monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 // %sans-serif {
 //   font-family: $sans-serif;
